@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout style="@style/tabTitleStyle">
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="个人交流"
+            android:textColor="@color/title_text"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/myselector"
+            android:scaleType="center"
+            android:src="@mipmap/top_back" />
+
+        <ImageView
+            android:id="@+id/iv_release"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/myselector"
+            android:src="@mipmap/img_edit_post" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_post"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+        <ImageView
+            android:id="@+id/iv_goto_top"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="150dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/icon_goto_top" />
+    </RelativeLayout>
+
+
+</com.tesu.manicurehouse.support.PercentLinearLayout>

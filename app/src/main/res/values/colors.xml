@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 天蓝色 -->
+    <color name="gray">#808080</color>
+    <!-- 暗灰色 -->
+    <color name="dimgrey">#696969</color>
+    <color name="pink_text">#ff6483</color>
+    <color name="yellow_light">#f4af29</color>
+    <color name="TitleRed"> #e93759</color>
+    <color name="alphablack">#55ffffff</color>
+    <color name="title_text">#ffffff</color>
+    <color name="tab_text_press">#18B4ff</color>
+    <color name="tab_text">#ccc</color>
+    <color name="item_divider">#ffd7d7d7</color>
+    <color name="bg">#66cccccc</color>
+    <color name="item_download_bg">#cccccccc</color>
+    <color name="menu_bg_normal">#f0f1f3</color>
+    <color name="menu_bg_press">#cecece</color>
+    <color name="bg_click">#55ffff</color>
+    <!-- 页签指示器 -->
+    <color name="background_tab_pressed">#ffffff</color>
+    <color name="tab_indicator_selected">#18B4ED</color>
+    <color name="tab_text_selected">#18B4ED</color>
+    <color name="tab_text_normal">#333333</color>
+    <!-- 布局灰色背景 -->
+    <color name="app_layout_background_gray">#F0ECE0</color>
+    <!-- 全局颜色 -->
+    <color name="share_background">#fbf9fb</color>
+    <color name="text_red">#ffff4444</color>
+    <color name="tab_background">#ffffff</color>
+    <!-- DefaultBlueColor 33, 185, 252, 1 -->
+    <color name="defaultBlueColor">#21B9FC</color>
+    <!-- TextBlackColor 50, 50, 50, 1 -->
+    <color name="TextBlackColor">#323232</color>
+    <!-- TextDarkGrayColor 102, 102, 102, 1 -->
+    <color name="TextDarkGrayColor">#666666</color>
+    <!-- TextGrayColor RGBColor(152, 152, 152, 1) -->
+    <color name="TextGrayColor">#989898</color>
+    <!-- LineGrayColor RGBColor(204, 204, 204, 1) -->
+    <color name="LineGrayColor">#CCCCCC</color>
+    <color name="GrayBackground">#f5f4f2</color>
+    <!-- ImageBackgroundGrayColor RGBColor(243, 243, 243, 1 -->
+    <color name="ImageBackgroundGrayColor">#F3F3F3</color>
+    <color name="LikedColor">#FE6F6F</color>
+    <color name="app_layout_background_tint_white">#FFEEEEEE</color>
+	  <color name="black">#000000</color>
+    <color name="login_background">#88ffffff</color>
+
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#ffccddff</color>
+    <color name="grey">#58616d</color>
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="ff29283A">#ff29283A</color>
+    <color name="ff1f8fe4">#ff1f8fe4</color>
+    <color name="ff1b305d">#ff1b305d</color>
+    <color name="ff135689">#ff135689</color>
+    <color name="black_70">#70000000</color>
+
+
+    <color name="ml_primary">#f63a21</color>
+    <color name="ml_primary_dark">#c82712</color>
+    <color name="ml_text_primary">#ffffff</color>
+    <color name="ml_accent">#defa5053</color>
+
+    <color name="ml_text_red">#ff3f43</color>
+    <color name="ml_text_white">#ffffff</color>
+    <color name="ml_text_black">#232323</color>
+    <color name="ml_white">#ffffff</color>
+    <color name="ml_gray">#9c9c9c</color>
+    <color name="ml_yellow">#ff842d</color>
+    <color name="ml_blue">#0a95ff</color>
+
+    <color name="ml_bg_white">#e8e8e8</color>
+    <color name="ml_text_bg_black">#9c232323</color>
+
+    <color name="ml_btn_normal">#e8e8e8</color>
+    <color name="ml_btn_pressed">#d8d8d8</color>
+    <color name="ml_btn_red_normal">#ff1e1e</color>
+    <color name="ml_btn_red_pressed">#d71a1a</color>
+    <color name="ml_btn_green_normal">#43af00</color>
+    <color name="ml_btn_green_pressed">#348303</color>
+
+    <color name="text_color_black">#3c3c3c</color>
+    <color name="text_color_gray">#adadad</color>
+    <color name="subtitle_text_color">@color/black</color>
+</resources>

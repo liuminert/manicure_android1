@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_color"
+        android:layout_width="80dp"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/iv_image_color"
+            android:src="@mipmap/img_bule"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="85%w"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="83%h"
+            />
+        <ImageView
+            android:id="@+id/iv_choose"
+            android:src="@mipmap/icon_choose"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="50%w"
+            app:layout_heightPercent="50%w"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="20%h"
+            />
+        <TextView
+            android:id="@+id/tv_image_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="17%h"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="13sp"
+            />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+
+</LinearLayout>

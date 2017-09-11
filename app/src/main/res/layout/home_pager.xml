@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <!--<include layout="@layout/myviewpager" />-->
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_home_new"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/GrayBackground"
+            android:divider="@null"
+            android:dividerHeight="1dp"
+            android:paddingBottom="59dp" />
+
+        <com.tesu.manicurehouse.support.PercentRelativeLayout
+            android:id="@+id/prl_head"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="美甲屋"
+                android:textColor="@color/tab_background"
+                android:textSize="17sp"
+                app:layout_widthPercent="15%w" />
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv"
+                android:background="@drawable/findshop_search_shape"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/but_sea"
+                android:paddingRight="10dp"
+                app:layout_heightPercent="70%h"
+                app:layout_widthPercent="75%w" />
+
+        </com.tesu.manicurehouse.support.PercentRelativeLayout>
+        <ImageView
+            android:id="@+id/iv_goto_top"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="150dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/icon_goto_top" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

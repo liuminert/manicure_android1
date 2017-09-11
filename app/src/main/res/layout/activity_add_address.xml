@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/tab_background"
+
+    >
+
+    <RelativeLayout
+        style="@style/tabTitleStyle" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="新增收货地址"
+            android:textColor="@color/title_text"
+            android:textSize="17sp" />
+
+        <ImageView
+             android:background="@drawable/myselector"
+            android:scaleType="center"
+            android:id="@+id/iv_top_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/top_back" />
+    </RelativeLayout>
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%h"
+        >
+
+        <TextView
+            android:id="@+id/tv_consignee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="25%w"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="收货人姓名："
+            />
+
+        <EditText
+            android:id="@+id/et_consignee"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/tv_consignee"
+            app:layout_widthPercent="70%w"
+            android:layout_marginLeft="20dp"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:hint="请输入收货人姓名"
+            android:singleLine="true"
+            android:textColorHint="@color/TextGrayColor"
+            android:textSize="14sp" />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%h"
+        >
+
+        <TextView
+            android:id="@+id/tv_tellphone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="25%w"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="联系电话:"
+            />
+
+        <EditText
+            android:inputType="number"
+            android:maxLength="11"
+            android:id="@+id/et_tellphone"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/tv_tellphone"
+            app:layout_widthPercent="70%w"
+            android:layout_marginLeft="20dp"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:hint="请输入联系电话"
+            android:singleLine="true"
+            android:textColorHint="@color/TextGrayColor"
+            android:textSize="14sp" />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_region"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%h"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="20%w"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="所在地区"
+            />
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/right_arrow" />
+
+
+        <TextView
+            android:gravity="center_vertical|right"
+            android:id="@+id/tv_region"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="50%w"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv"
+            android:layout_marginRight="10dp"
+            android:text="请选择"
+            />
+
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%h"
+        >
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="25%w"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="详细地址:"
+            />
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/tv_code"
+            app:layout_widthPercent="70%w"
+            android:layout_marginLeft="20dp"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:hint="请输入详细收货地址"
+            android:singleLine="true"
+            android:textColorHint="@color/TextGrayColor"
+            android:textSize="14sp" />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        >
+
+        <Button
+            android:layout_centerHorizontal="true"
+            android:id="@+id/bt_save"
+            android:layout_width="0dp"
+            app:layout_widthPercent="70%w"
+            android:layout_height="40dp"
+            android:background="@mipmap/bt_order"
+            android:text="保存"
+            android:textColor="@color/title_text"
+            android:textSize="17sp" />
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/bt_save"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/bt_cancel"
+            android:layout_width="0dp"
+            app:layout_widthPercent="70%w"
+            android:layout_height="40dp"
+            android:background="@mipmap/bt_gray_cancel"
+            android:text="取消"
+            android:textColor="@color/TextGrayColor"
+            android:textSize="17sp" />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+</com.tesu.manicurehouse.support.PercentLinearLayout>

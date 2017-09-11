@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:id="@+id/rl_manage_dialog"
+    android:clickable="true">
+
+    <com.tesu.manicurehouse.support.PercentLinearLayout
+        android:layout_marginTop="2dp"
+        android:background="@color/black"
+        android:layout_width="0dp"
+        app:layout_widthPercent="17.5%w"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="7%h"
+            android:gravity="center"
+            android:text="教程"
+            android:id="@+id/tv_course"
+            android:textColor="@color/tab_background"
+            />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/tab_background"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="7%h"
+            android:gravity="center"
+            android:text="商品"
+            android:id="@+id/tv_good"
+            android:textColor="@color/tab_background"
+            />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/tab_background"
+            />
+        <TextView
+            android:textColor="@color/tab_background"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="7%h"
+            android:gravity="center"
+            android:text="社区"
+            android:id="@+id/tv_community"
+            />
+    </com.tesu.manicurehouse.support.PercentLinearLayout>
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

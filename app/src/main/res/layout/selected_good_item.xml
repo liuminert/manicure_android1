@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_good"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="80%h"
+            app:layout_heightPercent="80%h"
+            app:layout_marginPercent="10%h"
+            />
+
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_marginTopPercent="20%h"
+            android:layout_width="0dp"
+            app:layout_widthPercent="50%w"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_good_name"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/iv_good"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:layout_marginBottomPercent="20%h"
+            android:id="@+id/tv_good_color"
+            android:layout_toRightOf="@id/iv_good"
+            android:text="合计："
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:layout_marginBottomPercent="20%h"
+            android:id="@+id/tv_total_price"
+            android:layout_toRightOf="@id/tv_good_color"
+            android:textColor="@color/pink_text"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:layout_marginBottomPercent="20%h"
+            android:id="@+id/tv_good_num"
+            android:layout_alignParentRight="true"
+            android:text="x1"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+</com.tesu.manicurehouse.support.PercentLinearLayout>

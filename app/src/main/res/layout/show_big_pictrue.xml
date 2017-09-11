@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <com.tesu.manicurehouse.widget.HackyViewPager
+        android:id="@+id/viewPager_show_bigPic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000" />
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_margin="10dp"
+        android:textColor="@color/tab_background"
+        android:textSize="17sp"
+        android:gravity="right"
+        android:text="关闭"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</RelativeLayout>

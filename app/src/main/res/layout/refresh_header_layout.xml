@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 刷新部分 -->
+
+    <RelativeLayout
+        android:id="@+id/refresh_header_refresh_part"
+        android:layout_width="match_parent"
+        android:layout_height="130dp" >
+
+        <!-- scale和tween部分 -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp" >
+
+            <!--<ImageView-->
+                <!--android:id="@+id/refresh_header_pb"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:visibility="gone" />-->
+
+            <!--<ImageView-->
+                <!--android:visibility="gone"-->
+                <!--android:id="@+id/refresh_header_dog"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_alignParentBottom="true"-->
+                 <!--/>-->
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 自定义部分 -->
+
+</LinearLayout>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/ll_myself"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/tabTitleStyle">
+
+
+        <TextView
+            android:id="@+id/tv_myselmy_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="个人信息"
+            android:textColor="@color/title_text"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+    </RelativeLayout>
+
+    <!-- 帧布局 里面有三层 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="59dp"
+        android:scrollbars="vertical">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:id="@+id/setup_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ImageBackgroundGrayColor"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/tab_background"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_head_portrait"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="头像"
+                            android:textColor="@color/tab_text_normal"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:scaleType="center"
+                            android:src="@mipmap/right_arrow" />
+
+                        <com.tesu.manicurehouse.widget.CircleImageView
+                            android:id="@+id/iv_image"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@id/iv_right"
+                            android:src="@mipmap/myself_pic"
+                            app:border_color="@color/TextGrayColor"
+                            app:border_width="1dp" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/LineGrayColor" />
+                    <!-- 性别修改 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="姓名"
+                            android:textColor="@color/tab_text_normal"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_right1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:scaleType="center"
+                            android:src="@mipmap/right_arrow" />
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@id/iv_right1"
+                            android:gravity="center"
+                            android:src="@mipmap/icon_headportrait"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/LineGrayColor" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_identity"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="身份"
+                            android:textColor="@color/tab_text_normal"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/iv_right2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:scaleType="center"
+                            android:src="@mipmap/right_arrow" />
+
+                        <TextView
+                            android:id="@+id/tv_identity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:src="@mipmap/icon_headportrait"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/LineGrayColor" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/tab_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="收货地址"
+                        android:textColor="@color/tab_text_normal"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_right3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/right_arrow" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/iv_right3"
+                        android:gravity="center"
+                        android:src="@mipmap/icon_headportrait"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+
+                <!-- 清理缓存 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/tab_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="城市"
+                        android:textColor="@color/tab_text_normal"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_right4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/right_arrow" />
+
+                    <TextView
+                        android:id="@+id/tv_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/iv_right4"
+                        android:gravity="center"
+                        android:src="@mipmap/icon_headportrait"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+                <!-- 清理缓存 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_lable"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/tab_background"
+                    android:paddingLeft="18dp">
+
+                    <TextView
+                        android:id="@+id/tv_title_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="个性签名"
+                        android:textColor="@color/tab_text_normal"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_right5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/right_arrow" />
+
+                    <TextView
+                        android:id="@+id/tv_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/tv_title_lable"
+                        android:gravity="center"
+                        android:src="@mipmap/icon_headportrait"
+                        android:text="无个性，不签名"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+            <!--&lt;!&ndash; 网络没有连接 &ndash;&gt;-->
+
+            <!--<include-->
+            <!--layout="@layout/pager_error"-->
+            <!--android:visibility="gone" />-->
+            <!--&lt;!&ndash; 数据为空 &ndash;&gt;-->
+
+            <!--<include-->
+            <!--layout="@layout/pager_empty"-->
+            <!--android:visibility="gone" />-->
+            <!--&lt;!&ndash; 正在加载中 &ndash;&gt;-->
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

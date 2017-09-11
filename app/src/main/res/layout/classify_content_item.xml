@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.widget.RatioLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:soda="http://schemas.android.com/apk/res-auto"
+    soda:ratio="1.33"
+    soda:relative="width"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/pic"
+        android:scaleType="fitXY"
+        />
+
+</com.tesu.manicurehouse.widget.RatioLayout>

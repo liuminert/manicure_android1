@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background">
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="搜索"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/top_back" />
+    </RelativeLayout>
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/pr_search_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/rl_head"
+        android:layout_margin="5dp"
+        android:background="@drawable/border"
+        app:layout_heightPercent="7%h"
+        app:layout_widthPercent="70%w">
+
+        <TextView
+            android:id="@+id/sp_name"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:drawableRight="@mipmap/icon_popmenu"
+            android:gravity="center"
+            android:text="教程"
+            android:textSize="16sp"
+            app:layout_widthPercent="25%w" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/sp_name"
+            android:background="@null"
+            android:hint="输入搜索内容"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            app:layout_widthPercent="75%w" />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/rl_head"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@id/pr_search_input"
+        android:background="@drawable/btn_black_shape"
+        android:gravity="center"
+        android:text="搜索"
+        android:textColor="@color/tab_background"
+        app:layout_heightPercent="7%h"
+        app:layout_widthPercent="30%w" />
+
+    <com.tesu.manicurehouse.support.PercentLinearLayout
+        android:id="@+id/ll_hot_search"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pr_search_input"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="热门搜索"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_heightPercent="10%h" />
+
+        <GridView
+            android:listSelector="@color/transparent"
+            android:scrollbars="vertical"
+            android:id="@+id/gv_hot_search"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="4"
+            android:verticalSpacing="10dp"
+            app:layout_heightPercent="30%h"></GridView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="最近搜索"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_heightPercent="10%h" />
+
+
+        <GridView
+            android:listSelector="@color/transparent"
+            android:scrollbars="vertical"
+            android:id="@+id/gv_history_search"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="4"
+            android:verticalSpacing="10dp"
+            app:layout_heightPercent="40%h"></GridView>
+
+        <TextView
+            android:id="@+id/tv_claer_history"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="清除搜索记录"
+            android:textColor="@color/TextGrayColor"
+            android:textSize="14sp"
+            app:layout_heightPercent="10%h" />
+    </com.tesu.manicurehouse.support.PercentLinearLayout>
+
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tesu.manicurehouse.activity.SaleSupportActivity">
+
+    <WebView
+        android:id="@+id/wv_support"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="85%h"/>
+    <View
+        android:id="@+id/line3"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/wv_support"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_below="@id/line3"
+        app:layout_heightPercent="8%h"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:id="@+id/rl_customerservice"
+        >
+        <com.tesu.manicurehouse.support.PercentLinearLayout
+            android:id="@+id/ll_online_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_marginLeftPercent="40%w"
+            >
+            <ImageView
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/line_middle"
+                android:id="@+id/iv_customerservice"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_marginTopPercent="30%h"
+                app:layout_widthPercent="40%h"
+                app:layout_heightPercent="40%h"
+                android:src="@mipmap/icon_customerservice"
+                />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/line_middle"
+                android:gravity="center"
+                android:text="在线客服"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </com.tesu.manicurehouse.support.PercentLinearLayout>
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+    <View
+        android:id="@+id/line4"
+        android:layout_below="@id/rl_customerservice"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

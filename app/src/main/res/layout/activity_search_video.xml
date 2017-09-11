@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="搜索词"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+    </RelativeLayout>
+    <com.tesu.manicurehouse.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/tab_background"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 页签指示部分 -->
+
+        <com.tesu.manicurehouse.widget.TabSlidingIndicator
+            xmlns:manicurehouse="http://schemas.android.com/apk/res/com.tesu.manicurehouse"
+            android:id="@+id/indicator_concern_title"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            manicurehouse:pstsDividerColor="#fff"
+            manicurehouse:pstsIndicatorColor="#FF6632"
+            manicurehouse:pstsIndicatorHeight="1dp"
+            manicurehouse:pstsShouldExpand="true"
+            manicurehouse:pstsTabPaddingLeftRight="5dp"
+            manicurehouse:pstsUnderlineHeight="0dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:background="@mipmap/indicater_shadow" />
+
+        <!-- 帧布局 里面有三层 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/GrayBackground" />
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/GrayBackground" >
+
+            <!-- viewpager -->
+            <com.tesu.manicurehouse.widget.NoScrollViewPager
+                android:id="@+id/viewpager_concern_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tab_background"
+                >
+            </com.tesu.manicurehouse.widget.NoScrollViewPager>
+        </FrameLayout>
+    </com.tesu.manicurehouse.support.PercentLinearLayout>
+</com.tesu.manicurehouse.support.PercentLinearLayout>

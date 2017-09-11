@@ -1,0 +1,85 @@
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tab_background"
+    android:id="@+id/ll_main"
+    >
+
+    <!-- 标题 -->
+
+    <RelativeLayout style="@style/tabTitleStyle"
+        android:id="@+id/rl_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="支付"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/top_back" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_success_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="支付成功"
+        android:layout_below="@id/rl_head"
+        android:layout_centerHorizontal="true"
+        app:layout_heightPercent="6%h"
+        android:gravity="center"
+        app:layout_marginTopPercent="10%h"
+        android:textSize="20dp"
+        />
+
+    <ImageView
+        android:layout_marginRight="5dp"
+        android:id="@+id/iv_success"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_toLeftOf="@id/tv_success_title"
+        android:src="@mipmap/icon_success"
+        android:layout_below="@id/rl_head"
+        app:layout_marginTopPercent="10%h"
+        app:layout_widthPercent="10%h"
+        app:layout_heightPercent="10%h"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="赶紧查看您的宝贝吧"
+        android:layout_below="@id/tv_success_title"
+        android:layout_toRightOf="@id/iv_success"
+        app:layout_heightPercent="4%h"
+        android:gravity="center"
+        android:textSize="14dp"
+        />
+    <TextView
+        android:id="@+id/tv_goto_order"
+        android:text="查看我的宝贝"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="7%h"
+        app:layout_widthPercent="40%w"
+        android:textSize="14sp"
+        android:textColor="@color/tab_background"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/mygreenbtnlightselector"
+        />
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.tesu.manicurehouse.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.tesu.manicurehouse.support.PercentRelativeLayout
+            android:id="@+id/rl_lift"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/tab_background"
+            android:padding="5dp"
+            app:layout_heightPercent="60%w">
+
+            <ImageView
+                android:background="@color/GrayBackground"
+                android:scaleType="fitXY"
+                android:id="@+id/iv_one"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                app:layout_heightPercent="90%w"
+                app:layout_widthPercent="100%w" />
+
+            <TextView
+                android:id="@+id/tv_good_name_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_one"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:lines="1"
+                android:text="[8.18狂欢节特价优惠活动7折]8ml/瓶指甲油"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_marginTopPercent="2%h"
+                app:layout_widthPercent="80%w" />
+
+            <View
+                android:id="@+id/line_middle"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_olde_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_good_name_one"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/line_middle"
+                android:text="1454"
+                android:textColor="@color/TextGrayColor"
+                android:textSize="14sp" />
+
+            <TextView
+                app:layout_marginTopPercent="2%h"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_good_price_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_good_name_one"
+                android:text="￥2.50起"
+                android:textColor="@color/pink_text"
+                android:textSize="14sp" />
+        </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/GrayBackground" />
+
+        <com.tesu.manicurehouse.support.PercentRelativeLayout
+            android:id="@+id/rl_rihgt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/tab_background"
+            android:padding="5dp"
+            app:layout_heightPercent="60%w">
+
+            <View
+                android:id="@+id/line_middle1"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:background="@color/GrayBackground"
+                android:scaleType="fitXY"
+                android:id="@+id/iv_two"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                app:layout_heightPercent="90%w"
+                app:layout_widthPercent="100%w" />
+
+            <TextView
+                android:id="@+id/tv_good_name_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_two"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:text="[8.18狂欢节特价优惠活动7折]8ml/瓶指甲油"
+                android:lines="1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_heightPercent="15%h"
+                app:layout_marginTopPercent="2%h"
+                app:layout_widthPercent="80%w" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_olde_price_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/line_middle1"
+                android:text="1454"
+                android:textColor="@color/TextGrayColor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_good_price_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="￥2.50起"
+                android:textColor="@color/pink_text"
+                android:textSize="14sp" />
+        </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    </com.tesu.manicurehouse.support.PercentLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/GrayBackground" />
+</com.tesu.manicurehouse.support.PercentLinearLayout>

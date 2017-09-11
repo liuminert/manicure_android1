@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ll_myself">
+
+    <RelativeLayout android:id="@+id/rl_head" style="@style/tabTitleStyle" >
+
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/icon_search" />
+
+        <TextView
+            android:id="@+id/tv_myselmy_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="社区"
+            android:textColor="@color/title_text"
+            android:textSize="17sp" />
+
+
+       
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/rl_head"
+        android:id="@+id/community_vp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="33%h"
+        />
+    <LinearLayout
+        android:layout_below="@id/rl_head"
+        android:id="@+id/ll_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%h"
+        app:layout_marginTopPercent="17%h"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/v_dot0"
+                style="@style/dot_style"
+                android:background="@drawable/dot_focused" />
+
+            <View
+                android:id="@+id/v_dot1"
+                style="@style/dot_style" />
+
+            <View
+                android:id="@+id/v_dot2"
+                style="@style/dot_style" />
+
+            <View
+                android:id="@+id/v_dot3"
+                style="@style/dot_style" />
+
+            <View
+                android:id="@+id/v_dot4"
+                style="@style/dot_style" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/community_vp"
+        android:layout_marginBottom="59dp"
+        >
+        <ImageView
+            app:layout_marginTopPercent="4%h"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="40%h"
+            app:layout_widthPercent="34%w"
+            app:layout_marginLeftPercent="12%w"
+            android:src="@mipmap/img1"
+            android:id="@+id/iv_personal_communication"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="6%h"
+            app:layout_marginLeftPercent="12%w"
+            app:layout_widthPercent="34%w"
+            android:text="个人交流"
+            android:textSize="12sp"
+            android:layout_below="@id/iv_personal_communication"
+            android:gravity="center"
+            />
+        <ImageView
+            app:layout_marginTopPercent="4%h"
+            app:layout_marginLeftPercent="54%w"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="40%h"
+            app:layout_widthPercent="34%w"
+            android:src="@mipmap/img2"
+            android:id="@+id/iv_manicure_information"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="6%h"
+            app:layout_marginLeftPercent="54%w"
+            app:layout_widthPercent="34%w"
+            android:text="美甲资讯"
+            android:textSize="12sp"
+            android:layout_below="@id/iv_manicure_information"
+            android:gravity="center"
+            />
+
+        <ImageView
+            app:layout_marginTopPercent="52%h"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="40%h"
+            app:layout_widthPercent="34%w"
+            app:layout_marginLeftPercent="12%w"
+            android:src="@mipmap/img3"
+            android:id="@+id/iv_manicurist_communication"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="6%h"
+            app:layout_marginLeftPercent="12%w"
+            app:layout_widthPercent="34%w"
+            android:textSize="12sp"
+            android:text="美甲师交流"
+            android:layout_below="@id/iv_manicurist_communication"
+            android:gravity="center"
+            />
+        <ImageView
+            app:layout_marginLeftPercent="54%w"
+            app:layout_marginTopPercent="52%h"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="40%h"
+            app:layout_widthPercent="34%w"
+            android:src="@mipmap/img4"
+            android:id="@+id/iv_official_events"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="6%h"
+            app:layout_marginLeftPercent="54%w"
+            app:layout_widthPercent="34%w"
+            android:textSize="12sp"
+            android:text="官方活动"
+            android:layout_below="@id/iv_manicurist_communication"
+            android:gravity="center"
+            />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

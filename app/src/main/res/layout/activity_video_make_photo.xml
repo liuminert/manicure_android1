@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/view_title"
+        style="@style/tabTitleStyle">
+
+        <ImageView
+            android:id="@+id/video_new_img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:src="@mipmap/top_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="本地图片"
+            android:textColor="@color/title_text"
+            android:textSize="17sp" />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+    <GridView
+        android:padding="10dp"
+        android:id="@+id/phote_gv"
+        android:layout_below="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="60%h"
+        android:horizontalSpacing="5dp"
+        android:numColumns="4"
+        android:verticalSpacing="5dp"/>
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/phote_gv"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_choose_photo">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="支持3~6张图片"/>
+        <TextView
+            android:id="@+id/start_make_tv"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:layout_widthPercent="40%w"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bt_bg_l"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="开始制作"/>
+        <GridView
+            android:layout_marginTop="10dp"
+            android:id="@+id/selected_phote_gv"
+            android:layout_below="@+id/start_make_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="60%h"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp"
+            android:numColumns="4"
+
+            />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

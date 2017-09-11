@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 聚光效果 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+
+            <!-- 填充的颜色 -->
+            <solid android:color="@color/defaultBlueColor" />
+            <!-- 设置按钮的四个角为弧形 -->
+            <!-- android:radius 弧形的半径 -->
+            <corners android:radius="5dip" />
+
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval" >
+            <gradient
+                android:endColor="#00ffffff"
+                android:gradientRadius="60"
+                android:startColor="#ffffffff"
+                android:type="radial" />
+
+        </shape>
+    </item>
+
+</layer-list>

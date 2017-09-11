@@ -1,0 +1,211 @@
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 标题       app:layout_heightPercent="15%h"
+            app:layout_marginLeftPercent="2%w"
+            app:layout_widthPercent="25%w"-->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="信息"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+        <TextView
+            android:id="@+id/tv_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight= "true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="全部"
+            android:textColor="@color/tab_background" />
+    </RelativeLayout>
+    <!--<LinearLayout
+        android:layout_below="@id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_trading_information"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_tradinginformation"
+                android:id="@+id/iv_trading_information"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_trading"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_trading_information"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易信息"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_below="@id/tv_trading"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_trading_information"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单已经成功提交，商品已经发货。"
+                android:textColor="@color/TextGrayColor"
+                android:textSize="12sp" />
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/iv_down_trading"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/icon_prompt" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/LineGrayColor"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_system_information"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_systeminformation"
+                android:id="@+id/iv_system_information"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_system"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_system_information"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统信息"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_below="@id/tv_system"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_system_information"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新版本已经发布，赶快去看看。"
+                android:textColor="@color/TextGrayColor"
+                android:textSize="12sp" />
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/iv_down_system"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/icon_prompt" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/LineGrayColor"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_notice_information"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_notificationmessage"
+                android:id="@+id/iv_notice_information"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_notice"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_notice_information"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通知信息"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_below="@id/tv_notice"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_notice_information"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新评论，赶快去看看。"
+                android:textColor="@color/TextGrayColor"
+                android:textSize="12sp" />
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/iv_down_notice"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/icon_prompt" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/LineGrayColor"
+            />
+    </LinearLayout>
+-->
+    <ListView
+        android:layout_below="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_message"></ListView>
+
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

@@ -1,0 +1,77 @@
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/GrayBackground"
+    android:id="@+id/ll_main"
+    >
+
+    <!-- 标题 -->
+
+    <RelativeLayout style="@style/tabTitleStyle" android:id="@+id/rl_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="类别选择"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:text="返回"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background"
+            />
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/icon_search" />
+    </RelativeLayout>
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_below="@id/rl_head"
+        app:layout_marginTopPercent="2%h"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <ListView
+            android:listSelector="@android:color/transparent"
+            android:paddingTop="5dp"
+            android:id="@+id/lv_classify_title"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            app:layout_widthPercent="20%w"
+            android:divider="@null"
+            android:dividerHeight="2dp"
+            ></ListView>
+
+        <GridView
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="1"
+            android:id="@+id/gv_classify"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/lv_classify_title"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            app:layout_widthPercent="80%w"
+            ></GridView>
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

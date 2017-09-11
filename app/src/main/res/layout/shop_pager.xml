@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabShopTitleStyle" >
+
+        <com.tesu.manicurehouse.support.PercentRelativeLayout
+            android:id="@+id/rl_search_brand"
+            android:layout_centerInParent="true"
+            android:layout_width="0dp"
+            app:layout_widthPercent="70%w"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_search" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/magnifier"
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="50dp"
+                android:text="输入商品"
+                android:textColor="@color/TextGrayColor"
+                android:textSize="14sp" />
+        </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_shopcar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/bt_shopping"
+             />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_red"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/icon_red"
+            />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_shoping_num"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="8dp"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/tab_background"
+            />
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/bt_officialcustomerservice"
+            />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+    <com.tesu.manicurehouse.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/tab_background"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 页签指示部分 -->
+
+        <com.tesu.manicurehouse.widget.TabSlidingIndicator
+            xmlns:manicurehouse="http://schemas.android.com/apk/res/com.tesu.manicurehouse"
+            android:id="@+id/indicator_concern_title"
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            manicurehouse:pstsDividerColor="#fff"
+            manicurehouse:pstsIndicatorColor="#FF6632"
+            manicurehouse:pstsIndicatorHeight="1dp"
+            manicurehouse:pstsShouldExpand="true"
+            manicurehouse:pstsTabPaddingLeftRight="5dp"
+            manicurehouse:pstsUnderlineHeight="0dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:background="@mipmap/indicater_shadow" />
+
+        <com.tesu.manicurehouse.support.PercentRelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="8%h"
+            >
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_personal"
+                android:text="个人"
+                app:layout_marginLeftPercent="15%w"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="30%w"
+                app:layout_heightPercent="80%h"
+                android:textColor="@color/tab_background"
+                android:background="@drawable/bg_selectable"
+                />
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_manicuer"
+                app:layout_marginLeftPercent="55%w"
+                android:text="美甲师"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="30%w"
+                app:layout_heightPercent="80%h"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_noselectable"
+                />
+
+        </com.tesu.manicurehouse.support.PercentRelativeLayout>
+        <!-- 帧布局 里面有三层 -->
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/tab_background" >
+
+            <!-- viewpager -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/GrayBackground" />
+
+            <com.tesu.manicurehouse.widget.NoScrollViewPager
+                android:paddingBottom="59dp"
+                android:id="@+id/viewpager_concern_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+            </com.tesu.manicurehouse.widget.NoScrollViewPager>
+        </FrameLayout>
+    </com.tesu.manicurehouse.support.PercentLinearLayout>
+</com.tesu.manicurehouse.support.PercentLinearLayout>

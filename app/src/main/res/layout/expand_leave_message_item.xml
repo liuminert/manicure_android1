@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_problem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/bg_detailsontheproblem">
+
+        <TextView
+            android:id="@+id/tv_problem_title"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="问题详情："
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_msg_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_problem_title"
+            android:layout_margin="10dp"
+            android:text="这个问题好严重啊.用了之后又敏感，没这个问题好严重啊.用了之后又敏感，没这个问题好严重啊.用了之后又敏感，没这个问题好严重啊.用了之后又敏感，没这个问题好严重啊.用了之后又敏感，没这个问题好严重啊.用了之后又敏感，没这个问题好严重啊.用了之后又敏感，没这个问题好严重啊.用了之后又敏感，没这个问题好严重啊.用了之后又敏感，没这个问题好严重啊.用了之后又敏感，没刷呢阿斯顿骄傲是惊呆了卡机是进四大路口时间的快乐见识到了卡接口讲述了大空间上课见识到了卡就死定了可骄傲了深刻的煎熬了快速经典款拉近SD卡时间段了卡机是快乐的煎熬了快速的健康了" />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_officialreply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_problem"
+        android:layout_margin="10dp"
+        android:background="@mipmap/bg_officialreply"
+        >
+
+        <TextView
+            android:id="@+id/tv_answer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="官方答复："
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp" />
+
+
+            <TextView
+                android:id="@+id/tv_reply_content"
+                android:layout_below="@id/tv_answer_title"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="没什么大问题，骄傲是惊呆了卡机是进四大路口时间的快乐见识到了卡接口讲述了大空间上课见识到了卡就死定了可骄傲了深刻的煎熬了快速经典款拉近SD卡时间段了卡机是快乐的煎熬了快速的健康了" />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

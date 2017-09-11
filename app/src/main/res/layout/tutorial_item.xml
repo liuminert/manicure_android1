@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_tutorial"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="110%h"
+            app:layout_heightPercent="80%h"
+            android:background="@color/text_color_black"
+            android:scaleType="fitXY"
+            app:layout_marginPercent="10%h"
+            />
+
+        <TextView
+            android:lines="2"
+            android:ellipsize="end"
+            app:layout_marginTopPercent="10%h"
+            android:layout_width="0dp"
+            app:layout_widthPercent="40%w"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_tutorial_name"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/iv_tutorial"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:layout_marginBottomPercent="10%h"
+            android:id="@+id/tv_tutorial_time"
+            android:layout_toRightOf="@id/iv_tutorial"
+            android:textColor="@color/TextGrayColor"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:layout_marginTopPercent="10%h"
+            android:id="@+id/tv_tutorial_like_num"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/TextGrayColor"
+            android:textSize="14sp"
+            />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+</com.tesu.manicurehouse.support.PercentLinearLayout>

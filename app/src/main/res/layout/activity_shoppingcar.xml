@@ -1,0 +1,118 @@
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/GrayBackground"
+    android:id="@+id/ll_main"
+    >
+
+    <!-- 标题 -->
+
+    <RelativeLayout style="@style/tabTitleStyle" android:id="@+id/rl_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购物车"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/top_back" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:layout_marginTop="1dp"
+        android:layout_below="@id/rl_head"
+        android:id="@+id/lv_shopping_goods"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="80%h"
+        ></ListView>
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%h"
+        android:background="@color/tab_background"
+        >
+        <CheckBox
+            android:background="@drawable/checkb_select"
+            android:checked="true"
+            android:id="@+id/cb_all_good"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_marginLeftPercent="5%w"
+            android:layout_centerVertical="true"
+            app:layout_heightPercent="5%w"
+            app:layout_widthPercent="5%w"
+            android:button="@null"
+            />
+        <TextView
+            android:id="@+id/tv_total_choose"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/cb_all_good"
+            app:layout_marginLeftPercent="2%w"
+            android:layout_centerVertical="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="6%w"
+            app:layout_widthPercent="15%w"
+            android:textSize="17sp"
+            android:text="全选"
+            />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:id="@+id/btn_order"
+            android:layout_width="0dp"
+            app:layout_widthPercent="20%w"
+            android:layout_height="fill_parent"
+            android:background="@drawable/mygreenbtnlightselector"
+            android:text="结算"
+            android:textColor="@color/title_text"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="总费用:"
+            android:textSize="17sp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv_total_choose"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:id="@+id/tv_total_price"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/tv_total"
+            android:layout_toLeftOf="@id/btn_order"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/pink_text"
+            />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

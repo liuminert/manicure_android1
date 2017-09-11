@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/iv_video"
+        android:background="@drawable/border_gray"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/pic_look"
+        app:layout_heightPercent="34%w"
+        app:layout_widthPercent="34%w"
+        />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_title"
+        android:layout_below="@+id/iv_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+        android:maxEms="6"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="标题"/>
+
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

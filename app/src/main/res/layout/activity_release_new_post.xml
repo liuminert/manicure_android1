@@ -1,0 +1,89 @@
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tab_background"
+    android:id="@+id/ll_main"
+    >
+
+    <!-- 标题 -->
+
+    <RelativeLayout style="@style/tabTitleStyle">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发布新帖"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="发布"
+            android:textColor="@color/tab_background"
+            android:gravity="center"
+            android:textSize="14sp"
+             />
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/top_back" />
+    </RelativeLayout>
+    <EditText
+        android:layout_margin="10dp"
+        android:background="@mipmap/bg_et_title"
+        android:gravity="left|center_vertical"
+        android:hint="请输入标题，5-25个字"
+        android:id="@+id/et_title"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="7%h"
+        android:paddingLeft="10dp"
+        />
+    <EditText
+        android:layout_margin="10dp"
+        android:background="@mipmap/bg_et_content"
+        android:gravity="left"
+        android:hint="请输入内容，不超过1000字"
+        android:id="@+id/et_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="13%h"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        />
+    <GridView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipChildren="true"
+        android:gravity="center"
+        android:horizontalSpacing="3dip"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:verticalSpacing="3dip"
+        android:id="@+id/gv_image"
+      >
+
+    </GridView>
+
+</com.tesu.manicurehouse.support.PercentLinearLayout>

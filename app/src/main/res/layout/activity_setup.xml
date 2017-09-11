@@ -1,0 +1,213 @@
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 标题       app:layout_heightPercent="15%h"
+            app:layout_marginLeftPercent="2%w"
+            app:layout_widthPercent="25%w"-->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_person_information"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_personalinformation"
+                android:id="@+id/iv_trading_information"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_trading"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_trading_information"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人信息"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_black_right" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/LineGrayColor"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_account_safe"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_accountsecurity"
+                android:id="@+id/iv_account_safe"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_account_safe"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_account_safe"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户安全"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_black_right" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/LineGrayColor"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_help"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_help"
+                android:id="@+id/iv_help"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_help"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_help"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="帮助与反馈"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_black_right" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/LineGrayColor"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_about"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_aboutus"
+                android:id="@+id/iv_about"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_about"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_about"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关于我们"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_black_right" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/LineGrayColor"
+            />
+
+        <Button
+            android:id="@+id/btn_out_login"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/bt_order"
+            android:text="退出登录"
+            android:textColor="@color/title_text"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

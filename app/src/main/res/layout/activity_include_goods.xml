@@ -1,0 +1,116 @@
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+
+    <RelativeLayout style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="提及产品"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/top_back" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_select_goods"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="50%h"></ListView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%h"
+        >
+        <TextView
+            android:id="@+id/tv_totol_num"
+            app:layout_marginLeftPercent="5%w"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+        <TextView
+            app:layout_marginRightPercent="5%w"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_other_free1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/pink_text"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:id="@+id/tv_other_free1_title"
+            app:layout_marginRightPercent="2%w"
+            android:layout_toLeftOf="@id/tv_other_free1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="其中设计费用:"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <TextView
+        android:id="@+id/tv_total_price"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="合计:"
+        android:textColor="@color/pink_text"
+        android:textSize="17sp"
+        app:layout_heightPercent="8%h" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <Button
+        android:id="@+id/btn_order"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/bt_order"
+        android:text="一键下单"
+        android:textColor="@color/title_text"
+        android:textSize="17sp"
+        app:layout_heightPercent="8%h"
+        app:layout_marginLeftPercent="10%w"
+        app:layout_marginRightPercent="10%w" />
+</com.tesu.manicurehouse.support.PercentLinearLayout>

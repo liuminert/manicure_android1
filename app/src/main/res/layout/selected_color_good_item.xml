@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_good"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="80%h"
+            app:layout_heightPercent="80%h"
+            android:src="@mipmap/img_green"
+            app:layout_marginPercent="10%h"
+            />
+
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_centerVertical="true"
+            android:layout_width="0dp"
+            app:layout_widthPercent="15%w"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_color_name"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/iv_good"
+            android:text="001"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_reduce"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="10%w"
+            app:layout_heightPercent="10%w"
+            android:layout_below="@id/line2"
+            app:layout_marginLeftPercent="15%w"
+            android:layout_toRightOf="@id/tv_color_name"
+            android:background="@mipmap/bt_number"
+            android:gravity="center"
+            android:text="-" />
+
+        <EditText
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="1"
+            android:id="@+id/et_num"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="20%w"
+            app:layout_heightPercent="10%w"
+            android:layout_below="@id/line2"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_reduce"
+            android:background="@drawable/rectangular" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_add"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="10%w"
+            app:layout_heightPercent="10%w"
+            android:layout_toRightOf="@id/et_num"
+            android:layout_below="@id/line2"
+            android:background="@mipmap/bt_number"
+            android:gravity="center"
+            android:text="+" />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+</com.tesu.manicurehouse.support.PercentLinearLayout>

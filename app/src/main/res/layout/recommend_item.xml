@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:id="@+id/tv_time"
+        android:background="@drawable/border_nostork"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="邀请时间"
+        android:gravity="center"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:id="@+id/tv_people"
+        android:background="@drawable/border_nostork"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="店主"
+        android:gravity="center"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:id="@+id/tv_integral"
+        android:background="@drawable/border_nostork"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="积分"
+        android:gravity="center"
+        android:layout_weight="1"
+        />
+</LinearLayout>

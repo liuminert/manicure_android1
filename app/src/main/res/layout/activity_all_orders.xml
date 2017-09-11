@@ -1,0 +1,182 @@
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/GrayBackground"
+    android:id="@+id/ll_main"
+    >
+
+    <!-- 标题       app:layout_heightPercent="15%h"
+            app:layout_marginLeftPercent="2%w"
+            app:layout_widthPercent="25%w"-->
+
+    <RelativeLayout style="@style/tabTitleStyle" android:id="@+id/rl_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的订单"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background"
+            />
+    </RelativeLayout>
+
+    <com.tesu.manicurehouse.support.PercentLinearLayout
+        android:background="@color/tab_background"
+        android:layout_below="@id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/prl_title"
+        android:orientation="vertical"
+        >
+        <com.tesu.manicurehouse.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="8%h"
+            android:orientation="horizontal"
+            >
+            <RadioGroup
+                android:id="@+id/rg_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_all"
+                    style="@style/order_title_style"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="全部"
+                     />
+
+                <RadioButton
+                    android:id="@+id/rb_for_the_payment"
+                    style="@style/order_title_style"
+                    android:gravity="center"
+                    android:text="待付款"
+                     />
+
+                <RadioButton
+                    android:id="@+id/rb_for_the_delivery"
+                    style="@style/order_title_style"
+                    android:gravity="center"
+                    android:text="待发货"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_for_the_good"
+                    style="@style/order_title_style"
+                    android:gravity="center"
+                    android:text="待收货"
+                     />
+
+                <RadioButton
+                    android:id="@+id/rb_for_the_comment"
+                    style="@style/order_title_style"
+                    android:gravity="center"
+                    android:text="待评论"
+                   />
+            </RadioGroup>
+            <!--<TextView-->
+                <!--android:id="@+id/tv_all"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--app:layout_marginPercent="2%w"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:layout_widthPercent="16%w"-->
+                <!--app:layout_heightPercent="80%h"-->
+                <!--android:text="全部"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/tab_background"-->
+                <!--android:background="@drawable/bt_order_title_selectable"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_for_the_payment"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--app:layout_marginPercent="2%w"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:layout_widthPercent="16%w"-->
+                <!--app:layout_heightPercent="80%h"-->
+                <!--android:text="待付款"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/tab_background"-->
+                <!--android:background="@drawable/bt_order_title_selectable"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_for_the_delivery"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--app:layout_marginPercent="2%w"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:layout_widthPercent="16%w"-->
+                <!--app:layout_heightPercent="80%h"-->
+                <!--android:text="待发货"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/tab_background"-->
+                <!--android:background="@drawable/bt_order_title_selectable"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_for_the_good"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--app:layout_marginPercent="2%w"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:layout_widthPercent="16%w"-->
+                <!--app:layout_heightPercent="80%h"-->
+                <!--android:text="待收货"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/tab_background"-->
+                <!--android:background="@drawable/bt_order_title_selectable"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_for_the_comment"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--app:layout_marginPercent="2%w"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:layout_widthPercent="16%w"-->
+                <!--app:layout_heightPercent="80%h"-->
+                <!--android:text="待评论"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/tab_background"-->
+                <!--android:background="@drawable/bt_order_title_selectable"-->
+                <!--/>-->
+        </com.tesu.manicurehouse.support.PercentLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="2%h"
+            android:background="@color/GrayBackground"
+            />
+        <ListView
+            android:id="@+id/lv_order"
+            android:layout_below="@id/prl_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="90%h"
+            ></ListView>
+    </com.tesu.manicurehouse.support.PercentLinearLayout>
+
+
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

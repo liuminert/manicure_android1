@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/img_guide_one"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_skip_one"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:text="跳过"
+        android:textColor="@color/title_text"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

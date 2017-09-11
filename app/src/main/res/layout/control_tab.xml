@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background"
+    tools:context=".SplashActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/GrayBackground">
+
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/LineGrayColor"
+            android:dividerHeight="0.5dp" />
+    </RelativeLayout>
+    <!-- 控制事件分发的自定义控件 -->
+
+
+    <LinearLayout
+        android:id="@+id/my_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <!-- 内存区域 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/fl_content_fragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            <!-- 底部导航 -->
+
+            <FrameLayout
+                android:id="@+id/fl_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="59dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/white">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/LineGrayColor" />
+
+
+
+                <RadioGroup
+                    android:id="@+id/rg_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/tab_main_bg"
+                        android:id="@+id/rb_content_home"
+                        style="@style/main_tab_style"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="首页"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/tab_shop_bg"
+                        android:id="@+id/rb_content_shop"
+                        style="@style/main_tab_style"
+                        android:gravity="center"
+                        android:text="商城"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/show_logo"
+                        android:id="@+id/rb_content_show"
+                        style="@style/main_tab_style"
+                        android:gravity="center"
+                        android:text="晒美甲"
+                        android:textSize="10sp"
+                      />
+
+                    <RadioButton
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/tab_community_bg"
+                        android:id="@+id/rb_content_community"
+                        style="@style/main_tab_style"
+                        android:gravity="center"
+                        android:text="社区"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/tab_myself_bg"
+                        android:id="@+id/rb_content_myself"
+                        style="@style/main_tab_style"
+                        android:gravity="center"
+                        android:text="我的"
+                        android:textSize="10sp" />
+                </RadioGroup>
+
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

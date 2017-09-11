@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_myself"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/tabTitleStyle">
+
+
+        <TextView
+            android:id="@+id/tv_myselmy_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="个人资料"
+            android:textColor="@color/title_text"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+    </RelativeLayout>
+
+    <!-- 帧布局 里面有三层 -->
+
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:id="@+id/setup_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ImageBackgroundGrayColor"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tab_background"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_head_portrait"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+
+                        <com.tesu.manicurehouse.widget.CircleImageView
+                            android:id="@+id/iv_image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/iv_right"
+                            android:src="@mipmap/icon_headportrait"
+                            app:border_color="@color/TextGrayColor"
+                            app:border_width="0.5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/iv_image"
+                            android:layout_marginLeft="20dp"
+                            android:text="姓名"
+                            android:id="@+id/tv_name"
+                            android:textColor="@color/tab_text_normal"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_membership_grade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/iv_image"
+                            android:layout_marginLeft="20dp"
+                            android:layout_below="@id/tv_name"
+                            android:text="普通会员"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/tab_text_normal"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/LineGrayColor" />
+                    <!-- 性别修改 -->
+
+
+                
+
+                </LinearLayout>
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="个性签名"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rl_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:background="@color/tab_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp">
+
+                    <TextView
+                        android:id="@+id/tv_signature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="阿拉斯加打卡了时间的克拉经典款"
+                        android:textColor="@color/tab_text_normal"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="更多资料"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    />
+
+                <!-- 清理缓存 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:background="@color/tab_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="城市"
+                        android:id="@+id/tv_city_title"
+                        android:textColor="@color/tab_text_normal"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:text="深圳"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/tv_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/tv_city_title"
+                        android:gravity="center"
+                        android:src="@mipmap/icon_headportrait"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+                <!-- 清理缓存 -->
+
+            </LinearLayout>
+            <!--&lt;!&ndash; 网络没有连接 &ndash;&gt;-->
+
+            <!--<include-->
+            <!--layout="@layout/pager_error"-->
+            <!--android:visibility="gone" />-->
+            <!--&lt;!&ndash; 数据为空 &ndash;&gt;-->
+
+            <!--<include-->
+            <!--layout="@layout/pager_empty"-->
+            <!--android:visibility="gone" />-->
+            <!--&lt;!&ndash; 正在加载中 &ndash;&gt;-->
+        </FrameLayout>
+
+</LinearLayout>

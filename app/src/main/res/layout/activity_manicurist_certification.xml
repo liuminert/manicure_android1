@@ -1,0 +1,158 @@
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 标题       app:layout_heightPercent="15%h"
+            app:layout_marginLeftPercent="2%w"
+            app:layout_widthPercent="25%w"-->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="美甲师认证"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+    </RelativeLayout>
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_below="@id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="我们会保证您的隐私安全，仅用于身份认证！"
+            android:textColor="@color/TextGrayColor"
+            android:gravity="center"
+            app:layout_heightPercent="8%h"
+            />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@mipmap/pic_idcard"
+            android:id="@+id/iv_front_license"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/tv"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="25%h"
+            app:layout_widthPercent="55%w" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/tab_background"
+            android:background="@mipmap/bg_schematicdiagram"
+            android:text="示意图"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/tv"
+            app:layout_heightPercent="5%h"
+            android:layout_alignParentRight="true"
+            app:layout_marginRightPercent="25%w"
+            app:layout_marginTopPercent="2%h"
+            app:layout_widthPercent="20%w" />
+
+        <TextView
+            app:layout_marginTopPercent="2%h"
+            android:layout_centerHorizontal="true"
+            app:layout_widthPercent="70%w"
+            android:background="@mipmap/bg_upload"
+            android:layout_below="@id/iv_front_license"
+            android:id="@+id/tv_submit_front_license"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="8%h"
+            android:text="上传身份证正面照"
+            android:textColor="@color/TextGrayColor"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_below="@id/tv_submit_front_license"
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="请注意身份证信息清晰可见!"
+            android:textColor="@color/TextGrayColor"
+            android:gravity="center"
+            app:layout_heightPercent="8%h"
+            />
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@mipmap/pic_idcard_back"
+            android:id="@+id/iv_behond_license"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/tv1"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="25%h"
+            app:layout_widthPercent="55%w" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/tab_background"
+            android:background="@mipmap/bg_schematicdiagram"
+            android:text="示意图"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/tv1"
+            app:layout_heightPercent="5%h"
+            android:layout_alignParentRight="true"
+            app:layout_marginRightPercent="25%w"
+            app:layout_marginTopPercent="2%h"
+            app:layout_widthPercent="20%w" />
+        <TextView
+            app:layout_marginTopPercent="2%h"
+            android:layout_centerHorizontal="true"
+            app:layout_widthPercent="70%w"
+            android:background="@mipmap/bg_upload"
+            android:layout_below="@id/iv_behond_license"
+            android:id="@+id/tv_submit_behond_license"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="8%h"
+            android:text="上传身份证反面照"
+            android:textColor="@color/TextGrayColor"
+            android:gravity="center"
+            />
+        <Button
+            android:layout_below="@id/tv_submit_behond_license"
+            android:id="@+id/btn_comit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="8%h"
+            app:layout_marginTopPercent="2%h"
+            android:background="@mipmap/bt_order"
+            android:text="提交"
+            app:layout_widthPercent="70%w"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/title_text"
+            android:textSize="17sp" />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

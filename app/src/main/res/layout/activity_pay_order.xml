@@ -1,0 +1,339 @@
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="支付"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/top_back" />
+    </RelativeLayout>
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_total_price"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/rl_head"
+        android:background="@color/tab_background"
+        app:layout_heightPercent="8%h">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="还需支付金额"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="￥45.90"
+            android:textColor="@color/pink_text"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/rl_total_price"
+        android:background="@color/GrayBackground"
+        app:layout_heightPercent="2%h" />
+
+    <TextView
+        android:id="@+id/tv_pay_title"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/line"
+        android:background="@color/tab_background"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="支付方式"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_heightPercent="8%h" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_pay_title"
+        android:background="@color/GrayBackground" />
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_integral"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/line1"
+        android:background="@color/tab_background"
+        app:layout_heightPercent="8%h"
+        app:layout_marginTopPercent="0.1%h">
+
+        <ImageView
+            android:id="@+id/iv_integral"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/img_integral"
+            app:layout_heightPercent="70%h"
+            app:layout_marginTopPercent="15%h"
+            app:layout_widthPercent="70%h" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_integral"
+            android:gravity="center"
+            android:text="积分抵扣"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/cb_integral"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/checkb_select"
+            android:button="@null"
+            app:layout_heightPercent="5%w"
+            app:layout_widthPercent="5%w" />
+
+        <TextView
+            android:id="@+id/tv_pay_points"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/cb_integral"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/GrayBackground" />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_balance_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/rl_integral"
+        android:background="@color/tab_background"
+        app:layout_heightPercent="8%h"
+        app:layout_marginTopPercent="0.1%h">
+
+        <ImageView
+            android:id="@+id/iv_balance"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/icon_balancepayment"
+            app:layout_heightPercent="70%h"
+            app:layout_marginTopPercent="15%h"
+            app:layout_widthPercent="70%h" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_balance"
+            android:gravity="center"
+            android:text="余额支付"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/ch_balance"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/checkb_select"
+            android:button="@null"
+            app:layout_heightPercent="5%w"
+            app:layout_widthPercent="5%w" />
+
+        <TextView
+            android:id="@+id/tv_user_moneyuser_money"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/ch_balance"
+            android:gravity="center"
+            android:text="￥0.00"
+            android:textColor="@color/pink_text"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/GrayBackground" />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_weixin_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/rl_balance_pay"
+        android:background="@color/tab_background"
+        app:layout_heightPercent="8%h"
+        app:layout_marginTopPercent="0.1%h">
+
+        <ImageView
+            android:id="@+id/iv_weixin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/icon_weixinpayfor"
+            app:layout_heightPercent="70%h"
+            app:layout_marginTopPercent="15%h"
+            app:layout_widthPercent="70%h" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_weixin"
+            android:gravity="center"
+            android:text="微信支付"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/ch_weixin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/checkb_select"
+            android:button="@null"
+            app:layout_heightPercent="5%w"
+            app:layout_widthPercent="5%w" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/GrayBackground" />
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_zhifubao_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/rl_weixin_pay"
+        android:background="@color/tab_background"
+        app:layout_heightPercent="8%h"
+        app:layout_marginTopPercent="0.1%h">
+
+        <ImageView
+            android:id="@+id/iv_zhifubao"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/icon_zhifubaopayfor"
+            app:layout_heightPercent="70%h"
+            app:layout_marginTopPercent="15%h"
+            app:layout_widthPercent="70%h" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_zhifubao"
+            android:gravity="center"
+            android:text="支付宝支付"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/ch_zhifubao"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/checkb_select"
+            android:button="@null"
+            app:layout_heightPercent="5%w"
+            app:layout_widthPercent="5%w" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/GrayBackground" />
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_ensure_pay"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_zhifubao_pay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/bt_order"
+        android:text="确认支付"
+        android:textColor="@color/title_text"
+        android:textSize="17sp"
+        app:layout_widthPercent="70%w" />
+</com.tesu.manicurehouse.support.PercentRelativeLayout>

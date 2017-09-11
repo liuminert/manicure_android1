@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.manicurehouse.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_person_information"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/tv_problem"
+            android:layout_centerVertical="true"
+            android:layout_width="0dp"
+            app:layout_widthPercent="60%w"
+            android:layout_height="wrap_content"
+            android:text="1.发货问题怎么回事？"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/icon_black_right" />
+
+
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_question"
+        android:padding="10dp"
+        android:background="@color/GrayBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是什么贵问题，别没事找事哦，打你的！这是什么贵问题，别没事找事哦，打你的！这是什么贵问题，别没事找事哦，打你的！这是什么贵问题，别没事找事哦，打你的！"
+        android:textSize="12sp"
+        />
+
+</com.tesu.manicurehouse.support.PercentLinearLayout>

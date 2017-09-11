@@ -1,0 +1,576 @@
+<com.tesu.manicurehouse.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/bt_invitefriend"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/top_back" />
+    </RelativeLayout>
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_head"
+        android:paddingBottom="50dp">
+
+        <ScrollView
+            android:id="@+id/sv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.tesu.manicurehouse.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.tesu.manicurehouse.support.PercentRelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/rl_head"
+                    android:id="@+id/rl_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="12%h"
+                    android:background="@color/tab_background">
+                    <com.tesu.manicurehouse.widget.CircleImageView
+                        android:id="@+id/iv_uesr_img"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/line3"
+                        android:scaleType="centerCrop"
+                        app:layout_heightPercent="10%w"
+                        app:layout_widthPercent="10%w" />
+
+                    <com.tesu.manicurehouse.support.PercentRelativeLayout
+                        android:id="@+id/rl_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_toLeftOf="@id/line4"
+                        android:layout_toRightOf="@id/iv_uesr_img"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv_uesr_img"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textSize="14sp"
+                            app:layout_heightPercent="10%w"
+                            app:layout_widthPercent="28%w" />
+
+                        <ImageView
+                            android:layout_toRightOf="@id/tv_user_name"
+                            android:id="@+id/iv_browse"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:src="@mipmap/icon_browse"
+                            app:layout_heightPercent="6%w"
+                            app:layout_widthPercent="6%w"
+                            />
+                        <TextView
+                            android:id="@+id/tv_look_num"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/iv_browse"
+                            android:textSize="14sp"
+                            app:layout_heightPercent="10%w"
+                            app:layout_widthPercent="20%w" />
+
+                        <TextView
+                            android:id="@+id/tv_goto_attention"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/mygreenbtnlightselector"
+                            android:gravity="center"
+                            android:text="未关注"
+                            android:textColor="@color/tab_background"
+                            android:textSize="14sp"
+                            app:layout_heightPercent="8%w"
+                            app:layout_widthPercent="15%w" />
+
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_below="@id/tv_user_name"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv_uesr_img"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            app:layout_heightPercent="10%w"
+                            app:layout_widthPercent="28%w" />
+
+                        <ImageView
+                            android:id="@+id/iv_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_below="@id/tv_user_name"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/tv_date"
+                            android:src="@mipmap/icon_label"
+                            app:layout_heightPercent="6%w"
+                            app:layout_marginTopPercent="2%w"
+                            app:layout_widthPercent="6%w" />
+
+                        <GridView
+                            android:id="@+id/gv_lable"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_below="@id/tv_user_name"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/iv_lable"
+                            android:gravity="center"
+                            android:horizontalSpacing="10dp"
+                            android:numColumns="3"
+                            android:scrollbars="none"
+                            app:layout_heightPercent="8%w"
+                            app:layout_marginTopPercent="1%w"
+                            app:layout_widthPercent="57%w" />
+                    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+                    <!-- <View
+                         android:id="@+id/line2"
+                         android:layout_width="fill_parent"
+                         android:layout_height="0.5dp"
+                         android:layout_alignParentBottom="true"
+                         android:background="@color/LineGrayColor" />-->
+                </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+                <com.tesu.manicurehouse.widget.MyListView
+                    android:id="@+id/lv_show_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp" />
+
+
+                <com.tesu.manicurehouse.support.PercentLinearLayout
+                    android:id="@+id/rl_show_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_heightPercent="5%h">
+
+                    <com.tesu.manicurehouse.support.PercentRelativeLayout
+                        android:id="@+id/prl_like"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/line1"
+                        app:layout_heightPercent="100%h"
+                        app:layout_marginLeftPercent="2%w"
+                        app:layout_marginRightPercent="3%w"
+                        app:layout_widthPercent="20%w">
+
+                        <View
+                            android:id="@+id/line_middle2"
+                            android:layout_width="0.5dp"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/iv_liked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@id/line_middle2"
+                            android:scaleType="center"
+                            android:src="@mipmap/bt_love_selectable" />
+
+                        <TextView
+                            android:id="@+id/user_like_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/line_middle2"
+                            android:gravity="center_vertical|left"
+                            android:textColor="@color/TextGrayColor"
+                            android:textSize="14sp" />
+                    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+                    <com.tesu.manicurehouse.support.PercentRelativeLayout
+                        android:id="@+id/prl_collection"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_below="@id/line1"
+                        android:layout_centerHorizontal="true"
+                        app:layout_heightPercent="100%h"
+                        app:layout_marginLeftPercent="3%w"
+                        app:layout_marginRightPercent="3%w"
+                        app:layout_widthPercent="20%w">
+
+                        <View
+                            android:id="@+id/line_middle1"
+                            android:layout_width="0.5dp"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/iv_collection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@id/line_middle1"
+                            android:scaleType="center"
+                            android:src="@mipmap/bt_collect_selectable" />
+
+                        <TextView
+                            android:id="@+id/user_collection_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/line_middle1"
+                            android:gravity="center_vertical|left"
+                            android:textColor="@color/TextGrayColor"
+                            android:textSize="14sp" />
+                    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_error"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical"
+                        android:text="纠错"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="14sp"
+                        app:layout_heightPercent="100%h"
+                        app:layout_marginLeftPercent="5%w"
+                        app:layout_marginRightPercent="1%w"
+                        app:layout_widthPercent="20%w" />
+
+                    <com.tesu.manicurehouse.support.PercentRelativeLayout
+                        android:id="@+id/prl_share"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/line1"
+                        app:layout_heightPercent="100%h"
+                        app:layout_widthPercent="20%w">
+
+                        <View
+                            android:id="@+id/line_middle"
+                            android:layout_width="0.5dp"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@id/line_middle"
+                            android:scaleType="center"
+                            android:src="@mipmap/bt_transpont" />
+
+                        <TextView
+                            android:id="@+id/user_share_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/line_middle"
+                            android:gravity="center_vertical|left"
+                            android:textColor="@color/TextBlackColor"
+                            android:textSize="14sp" />
+                    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+                </com.tesu.manicurehouse.support.PercentLinearLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/rl_show_count"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/TextGrayColor" />
+
+                <!--<View
+                    android:visibility="gone"
+                    android:id="@+id/v_graphic_tutorials"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>-->
+
+                <com.tesu.manicurehouse.support.PercentLinearLayout
+                    android:id="@+id/pl_look"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="看了又看"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_heightPercent="10%w" />
+
+
+                    <!--<ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/pic_look" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/pic_look" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/pic_look" />-->
+                    <com.tesu.manicurehouse.widget.HorizontalListView
+                        android:id="@+id/lv_look"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="5dp"
+                        app:layout_heightPercent="43%w" />
+
+                </com.tesu.manicurehouse.support.PercentLinearLayout>
+
+                <com.tesu.manicurehouse.support.PercentRelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border_shape">
+
+                    <TextView
+                        android:id="@+id/tv_comment_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="评论"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_heightPercent="10%w" />
+
+                    <TextView
+                        android:id="@+id/tv_comment_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/tv_comment_title"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_heightPercent="10%w" />
+
+                    <com.tesu.manicurehouse.widget.CustomExpandableListView
+                        android:id="@+id/lv_comment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@id/tv_comment_title"
+                        android:background="@color/tab_background"
+                        android:divider="@null"
+                        android:groupIndicator="@null"
+                        android:listSelector="@android:color/transparent"
+                        app:layout_heightPercent="50%w"></com.tesu.manicurehouse.widget.CustomExpandableListView>
+                </com.tesu.manicurehouse.support.PercentRelativeLayout>
+            </com.tesu.manicurehouse.support.PercentLinearLayout>
+        </ScrollView>
+
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/ll_text_all"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_background">
+
+        <TextView
+            android:id="@+id/tv_goto_comment"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/myblackbtnselect"
+            android:gravity="center"
+            android:text="评论"
+            android:textColor="@color/tab_background" />
+
+        <TextView
+            android:id="@+id/tv_submit_homework"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/myblackbtnselect"
+            android:gravity="center"
+            android:text="交作业"
+            android:textColor="@color/tab_background" />
+
+        <TextView
+            android:id="@+id/tv_one_key_order"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@mipmap/bt_overbooking"
+            android:gravity="center"
+            android:text="一键下单"
+            android:textColor="@color/tab_background" />
+
+    </LinearLayout>
+
+    <com.tesu.manicurehouse.support.PercentRelativeLayout
+        android:id="@+id/rl_comment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:visibility="gone">
+
+        <com.tesu.manicurehouse.support.PercentRelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/GrayBackground">
+
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/border_shape"
+                android:hint="发表评论"
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                app:layout_marginLeftPercent="5%w"
+                app:layout_marginRightPercent="5%w"
+                app:layout_widthPercent="90%w" />
+
+        </com.tesu.manicurehouse.support.PercentRelativeLayout>
+    </com.tesu.manicurehouse.support.PercentRelativeLayout>
+
+    <com.tesu.manicurehouse.support.PercentLinearLayout
+        android:id="@+id/rl_share"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_heightPercent="40%h">
+
+        <GridView
+            android:id="@+id/gv_share"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:height="0dp"
+            android:cacheColorHint="@null"
+            android:columnWidth="60dip"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:gravity="center"
+            android:horizontalSpacing="4.0dip"
+            android:listSelector="@null"
+            android:numColumns="5"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="4.0dip"
+            app:layout_heightPercent="75%h"></GridView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/LineGrayColor" />
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="取消"
+            app:layout_heightPercent="25%h" />
+    </com.tesu.manicurehouse.support.PercentLinearLayout>
+
+</com.tesu.manicurehouse.support.PercentRelativeLayout>
